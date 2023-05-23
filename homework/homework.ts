@@ -47,6 +47,16 @@ type Fruit = {
     isEaten: boolean
 }
 
+function fruit(fruitObj: Fruit):void {
+    if (fruitObj.isEaten) {
+        console.log(`You ate my fruit (${fruitObj.name}) already.`)
+    } else if (!fruitObj.isEaten) {
+        console.log(`${fruitObj.color}`)
+    } else {
+        console.log("Object is null.")
+    }
+}
+
 const apple: Fruit = {
     name: "Apple",
     color: "Red",
@@ -58,17 +68,6 @@ const banana: Fruit = {
     color: "Yellow",
     isEaten: false
 }
-
-function fruit(fruitObj: Fruit):void {
-    if (fruitObj.isEaten) {
-        console.log(`You ate my fruit (${fruitObj.name}) already.`)
-    } else if (!fruitObj.isEaten) {
-        console.log(`${fruitObj.color}`)
-    } else {
-        console.log("Object in Parameter is wrong.")
-    }
-}
-
 // QUESTION 3
 
 // Create a Union Type named `Ebook` for `Book` and `DigitalBook` and create one instance of the new union type
